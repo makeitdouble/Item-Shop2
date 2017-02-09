@@ -1,0 +1,24 @@
+
+<div class="container product-info">
+    <div class="col-sm-6">
+        <img ng-src="img/products/{{item.image}}" alt="{{item.name}}" class="img-responsive"/>
+    </div>
+    <div class="col-sm-6">
+        <h2>{{item.name | uppercase}}</h2>
+        <p>{{item.description}}</p>
+        <p>Price: {{item.price | currency}}</p>
+        <a class="btn btn-info" ng-click="addCart(item)">Add to cart</a>
+    </div>
+</div>
+
+<div class="container comments">
+    <div class="row">
+        <div class="text-center">
+            <h4 class="fancy hidden-xs"><span>COMMENTS</span></h4>
+            <h4 class="visible-xs">COMMENTS</h4>
+        </div>
+        <div class="comments">
+            <comments-list></comments-list>
+        </div>
+    </div>
+</div>

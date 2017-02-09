@@ -1,0 +1,281 @@
+.cbalink{
+    display:none;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-info{
+    background-color: #C88E44;
+    border-color: #BB792F!important;
+    &:hover{
+        background-color: #DEBD87;
+        border-color: #BB792F!important;
+    }
+    &:active, &:focus{
+        border-color: #BB792F!important;
+        background-color: #C88E44!important;
+    }
+}
+
+
+
+.wrapper{
+    min-height: 100%;
+    margin-bottom: -200px;
+    @media all and (max-device-width : 767px) {
+        margin-bottom: -400px;
+    }
+}
+
+* html .wrapper{
+    height: 100%;
+}
+
+.push{
+    height: 200px;
+    @media all and (max-device-width : 767px) {
+        height:400px;
+    }
+}
+
+footer{
+    height: 200px;
+    @media all and (max-device-width : 767px) {
+        height:400px;
+    }
+}
+
+
+.view-frame{
+    min-height:287px;
+}
+
+.top-line{
+    height:20px;
+    background-color: #C88E44;
+}
+
+
+.header{
+    margin: 10px 0;
+    vertical-align: middle;
+    position: relative;
+
+    #main-menu{
+        li{
+            float: left;
+        }
+    }
+
+    div{
+        padding:10px 0;
+    }
+
+    .cart-field{
+        display: inline-block;
+    }
+    .cart-info{
+        position:absolute;
+        top: 70px;
+        right:10px;
+        width: 250px;
+        text-align: left;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: white;
+        border:1px solid #C9C0B5;
+        border-radius: 5px;
+        font-size: 18px;
+        z-index: 99999;
+        display: none;
+        table{
+            width:100%;
+        }
+        .delete-item{
+            cursor: pointer;
+            color:#F27C61;
+            &:hover{
+               color:#F2360C;
+            }
+        }
+        td{
+            padding:5px;
+        }
+    }
+}
+
+.nav-button{
+    background: white;
+    margin:5px;
+    padding: 10px 16px;
+    border:1px solid #C9C0B5;
+    border-radius: 5px;
+    float: none;
+}
+@media all and (max-device-width : 767px) {
+    .nav-button{
+        background: #EBE6E1;
+        border:0;
+    }
+}
+
+#navigation{
+    padding: 0;
+
+}
+li.linkMyAccount{
+    float: left;
+    @media all and (min-device-width : 768px){
+        float: right!important;
+    }
+}
+
+.topinfo{
+    padding: 10px 0;
+
+    .col-sm-6{
+        margin: 10px 0;
+    }
+    img{
+        margin:auto;
+    }
+
+}
+
+.comments{
+    padding:5px;
+    .comment-head{
+        span.author{
+            font-weight: bold;
+        }
+    }
+    .comment-footer{
+        span.comment-reply{
+            cursor: pointer;
+            color:#337ab7;
+        }
+    }
+    .comment-child{
+        padding:5px;
+        margin-left:20px;
+    }
+}
+.hellotext{
+
+    font-weight: bold;
+
+    p{
+        margin: 0;
+    }
+
+    h1{
+        font-weight: bold;
+        margin: 0;
+    }
+
+    h4{
+        font-weight: bold;
+        margin: 5px 0;
+    }
+}
+
+.favtitle {
+
+    div{
+        padding: 0;
+    }
+
+    h4{
+        margin: 0;
+    }
+}
+
+
+.fancy{
+    overflow: hidden;
+    text-align: left;
+    padding-left:30px;
+
+    span{
+        position: relative;
+    }
+
+    span:before,
+    span:after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        width: 200em;
+    }
+
+    span:before {
+        right: 100%;
+        margin-right: 10px;
+    }
+
+    span:after {
+        left: 100%;
+        margin-left: 10px;
+    }
+}
+
+.products{
+    text-align: center;
+
+    img{
+        border: 1px solid black;
+        display: inline-block;
+    }
+    .row div{
+        padding:15px;
+    }
+    h5{
+        font-weight: bold;
+    }
+}
+
+.container-fluid.footer{
+    background-color: #C9C0B5;
+    padding:10px 0 0 0;
+    height:200px;
+    @media (max-device-width : 767px) {
+        height:400px;
+    }
+    .container{
+        color:white;
+        padding:10px 10px 0 10px;
+    }
+
+    .glyphicon{
+        color: black;
+        left:0;
+    }
+    h4{
+        font-weight: bold;
+    }
+    .navbar-form{
+        padding: 0;
+        @media all and (max-device-width : 767px){
+            padding: 0 10px;
+        }
+    }
+    .form-control{
+        padding-left: 30px;
+        padding-right: 0;
+        width:100%;
+    }
+    .btn{
+        @media all and (max-device-width : 767px){
+            width:100%;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+}
+

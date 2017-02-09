@@ -1,0 +1,106 @@
+<script>
+    $( document ).ready(
+        function() {
+            $(function() {
+                $('#main-menu').smartmenus({
+                    mainMenuSubOffsetX: -1,
+                    subMenusSubOffsetX: 10,
+                    subMenusSubOffsetY: 0,
+                    subIndicators: false
+                });
+            });
+
+
+
+            function tog(){
+                $('div.cart-info').fadeToggle( 'fast');
+            }
+
+            $('div.cart-field').hover(function(){
+                $('div.cart-info').fadeIn('fast');
+                setTimeout(function(){$('div.cart-field').on('click', tog)}, 0);
+            },function(){
+                $(this).off('click', tog);
+                $('div.cart-info').fadeOut('fast');
+            });
+        }
+    );
+
+
+</script>
+<div class="header">
+    <div class="pull-left logo"><a href="/#!/"><img src="img/logo.png" class="img-responsive" alt="logo"></a></div>
+    <div class="pull-right">
+        <div class="search">
+            <input type="text" ng-model="searchInput.string" placeholder="Search"/>
+        </div>
+        <div class="cart-field">
+            <div class="cart">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <span class="itemCount"> <b>{{$ctrl.qCart}}</b></span>
+            </div>
+            <div class="cart-info">
+                {{emptyCartMessage}}
+                <table>
+                    <tr ng-repeat="item in $ctrl.localItems">
+                        <td><img ng-src="img/products/{{item.image}}" style="width:50px;"></td>
+                        <td><b>{{item.quantity}}</b> x {{item.price | currency}}</td>
+                        <td class="del"><div class="delete-item glyphicon glyphicon-remove" ng-click="deleteFromCart(item.id)"></div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total Price</td><td>{{$ctrl.totalPrice | currency}}</td>
+                    </tr>
+                </table>
+                <a class="btn btn-sm btn-success pull-left" ng-hide="emptyCartMessage" disabled>Checkout</a>
+                <a class="btn btn-sm btn-danger pull-right clear-cart" ng-click="clearCart()" ng-hide="emptyCartMessage">Clear</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="" id="navigation">
+            <ul id="main-menu" class="sm sm-simple">
+                <!--
+                <li><a href="#!/products/hat">WOMEN</a></li>
+                <li><a href="#!/" >MEN</a></li>
+                <li><a href="#">junior</a></li>
+                <li><a href="#">accessories</a></li>
+                -->
+                <li><a href="#!/products">Products</a>
+                    <ul>
+                        <li>
+                            <a href="#!/products/hat">Hats</a>
+                        </li>
+                        <li>
+                            <a href="#!/products/scarf">Scarfs</a>
+                        </li>
+                        <li>
+                            <a href="#!/products/bag" >Bags</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--
+                <li><a href="#">collections</a>
+                    <ul>
+                        <li>
+                            <a href="#" >2014</a>
+                        </li>
+                        <li>
+                            <a href="#" >2013</a>
+                        </li>
+                        <li>
+                            <a href="#" >2012</a>
+                        </li>
+                        <li>
+                            <a href="#" >2011</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">sale</a></li> -->
+
+            </ul>
+        </div>
+    </div>
+</div>

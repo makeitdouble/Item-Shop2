@@ -1,0 +1,15 @@
+<p class="message" ng-show="message">{{message}}</p>
+<div class="comment-info" ng-repeat="comment in comments">
+    <div class="comment-head">
+        <span class="author">{{comment.name}}</span>
+    </div>
+    <div class="comment-body">
+        <div class="comment-msg">
+           {{comment.text}}
+        </div>
+    </div>
+    <div class="comment-footer">
+        <span class="comment-reply" data-id="{{comment.id}}">Ответить</span>
+    </div>
+    <div tree class="comment-child" comments="comment.children"></div>
+</div>
